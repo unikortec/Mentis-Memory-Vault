@@ -25,3 +25,6 @@
 - `BLOCKED`: security/authorization prevents safe continuation.
 
 Never fake success. A single read/write in one account does not prove multi-user RLS. Do not test production by indiscriminate deletion.
+
+## Public-release sign-off
+For each target platform and storage mode record evidence, test identity, environment, timestamp, read-back hashes, broken-link count, a safe negative ACL test, and a scheduler execution receipt (if selected). Consult `PLATFORM_COMPATIBILITY.md`, `RECOVERY_AND_OPERATIONS.md` and `THREAT_MODEL.md`. Publish status separately for **specification**, **static CI**, **integration smoke test**, and **production acceptance**. Never combine them into one unqualified “passed”.
