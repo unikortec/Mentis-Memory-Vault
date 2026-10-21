@@ -1,0 +1,20 @@
+# Memory Vault installation report
+- Status: COMPLETE / PARTIAL / MANUAL_REQUIRED / BLOCKED
+- Installation date & timezone:
+- Agent/platform:
+- Skill version and repository commit:
+- Storage choice:
+- Primary storage / secondary storage:
+- Connected scopes (no secrets):
+- Taxonomy installed:
+- Record counts before / after:
+- Persistent instructions location and verification:
+- Auto-save policy and approval gates:
+- History sources actually accessed, counts/date windows:
+- History sources unavailable and reason:
+- Scheduler: provider/job ID/cadence/timezone/verification:
+- Backup and restore result:
+- Security validation result:
+- Failed or deferred steps:
+- How to disable or uninstall:
+- Next action requiring user involvement:
