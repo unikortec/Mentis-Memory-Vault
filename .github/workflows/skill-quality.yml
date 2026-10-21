@@ -1,0 +1,25 @@
+name: Skill quality gates
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run static tests
+        run: python -m unittest discover -s tests -v
+      - name: Confirm no SQL dump is bundled
+        run: |
+          if find . -name '*.sql' -print -quit | grep -q .; then
+            echo 'Prepackaged SQL is not allowed in this repository'
+            exit 1
+          fi
