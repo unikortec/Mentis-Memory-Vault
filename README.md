@@ -38,3 +38,12 @@ Persistent instructions are installed only where the platform supports them and 
 No personal data, account IDs, secrets or private vault dumps belong in this public repository. Do not automatically ingest inaccessible ChatGPT/Claude/Codex histories or treat Git commits as full conversation transcripts. Auto-save must respect explicit consent boundaries; sensitive and uncertain information requires review. Production writes require least privilege, backups and verification. Never claim autonomous background processing without a verified scheduler.
 
 License: [MIT](LICENSE).
+
+## Professional QA and go-live status
+
+- [Platform capability matrix](references/PLATFORM_COMPATIBILITY.md)
+- [Recovery, idempotency and operations](references/RECOVERY_AND_OPERATIONS.md)
+- [Threat model and public distribution gates](references/THREAT_MODEL.md)
+- [Static test suite](tests/test_package.py) · [GitHub Actions workflow](.github/workflows/skill-quality.yml)
+
+**Status:** source package published; real fresh-account ChatGPT/Claude installation, two-principal Supabase RLS, Google Drive ACL, dual-store conflict and scheduled-job execution **not yet certified**. Passing GitHub CI validates repository structure only. No claim of universal zero-touch setup.
