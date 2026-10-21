@@ -43,3 +43,8 @@ The assistant should actually perform all possible steps in the current session.
 
 ## Compatibility note
 Model-specific native skill locations and APIs change. Detect capabilities; use current official guidance rather than hard-coding success claims.
+
+## Mandatory production-readiness references
+Before a deployment recommendation, read `references/PLATFORM_COMPATIBILITY.md`, `references/RECOVERY_AND_OPERATIONS.md` and `references/THREAT_MODEL.md`. Check the latest CI test results; if not visible, label static CI status **unverified**. Do not confuse passing static tests with a real Supabase/Drive installation.
+
+The distribution repo intentionally contains no personal data and no pre-generated database SQL. Automated per-conversation capture requires a working platform-native lifecycle hook or equivalent integration. A textual instruction alone cannot subscribe to every new conversation.
